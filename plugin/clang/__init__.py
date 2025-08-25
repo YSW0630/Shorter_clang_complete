@@ -1,11 +1,10 @@
-#===- __init__.py - Clang Python Bindings --------------------*- python -*--===#
+# ===- __init__.py - Clang Python Bindings --------------------*- python -*--===#
 #
-#                     The LLVM Compiler Infrastructure
+# Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
+# See https://llvm.org/LICENSE.txt for license information.
+# SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 #
-# This file is distributed under the University of Illinois Open Source
-# License. See LICENSE.TXT for details.
-#
-#===------------------------------------------------------------------------===#
+# ===------------------------------------------------------------------------===#
 
 r"""
 Clang Library Bindings
@@ -20,5 +19,4 @@ The available modules are:
     Bindings for the Clang indexing library.
 """
 
-__all__ = ['cindex']
-
+__all__ = ["cindex"]

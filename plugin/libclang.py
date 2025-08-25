@@ -7,8 +7,6 @@ import threading
 import os
 import shlex
 
-from kinds import kinds
-
 def decode(value):
   import sys
   if sys.version_info[0] == 2:
@@ -443,21 +441,15 @@ def formatResult(result):
 
     info += chunk_spelling
 
-  # menu = info
-
   if returnValue:
-    # menu = decode(returnValue.spelling) + " " + menu
     info = decode(returnValue.spelling) + " " + info
 
   completion['word'] = snippetsAddSnippet(info, word, abbr)
   completion['abbr'] = abbr
-  # completion['menu'] = menu
+  completion['menu'] = ""
   completion['info'] = info
   completion['dup'] = 1
-
-  # Replace the number that represents a specific kind with a better
-  # textual representation.
-  completion['kind'] = kinds[result.cursorKind]
+  completion['kind'] = "[ID]"
 
   return completion
 
